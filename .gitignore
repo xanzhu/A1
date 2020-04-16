@@ -1,0 +1,5 @@
+certs/*
+.env
+yarn.lock
+tmp/logs/*
+.DS_store
