@@ -1,23 +1,41 @@
-version: '2'
+version: '3.7'
 
 networks:
-    nuxt:
+    A1:
         driver: bridge
 
 services:
 ### Applications Code Container #############################
     applications:
         image: tianon/true
-        volumes:
-            - ./src/:/usr/src/app
-            - ./tmp/logs:/var/log/nginx
-            - ./config/nginx/nginx.conf:/etc/nginx/nginx.conf
-            - ./config/${ENVIRONMENT}.conf:/etc/nginx/conf.d/site.conf
-            - ${SSL_CERT_PATH}:/etc/ssl/certs/crt.crt
-            - ${SSL_CERT_KEY_PATH}:/etc/ssl/private/key.key
+        volumes: &AppVol
+          - type: bind
+            source: ./src/
+            target: /usr/src/app
+          - type: bind
+            source: ./tmp/logs
+            target: /var/log/nginx
+          - type: bind
+            source: ./config/nginx/nginx.conf
+            target: /etc/nginx/nginx.conf
+          - type: bind
+            source: ./config/${ENVIRONMENT}.conf
+            target: /etc/nginx/conf.d/site.conf
+          - type: bind
+            source: ${SSL_CERT_PATH}
+            target: /etc/ssl/certs/cert.pem
+          - type: bind
+            source: ${SSL_CERT_KEY_PATH}
+            target: /etc/ssl/key.pem
+          - type: bind
+            source: ${SSL_CERT_CLOUDFLARE}
+            target: /etc/ssl/cloudflare.crt
+          - type: bind
+            source: ${SSL_CERT_DHPARAM}
+            target: /etc/ssl/dhparam4096.pem
         container_name: nuxt-app
         networks:
-            - nuxt
+            - A1
 
 ### nginx container ###############
     nginx:
@@ -30,21 +48,20 @@ services:
             - 443
         links:
             - nuxtjs
-        volumes_from:
-            - applications
+        volumes: *AppVol
+
         container_name: nuxt-nginx
         networks:
-            - nuxt
+            - A1
 
 ### NuxtJS frontend Container #############################
     nuxtjs:
         build:
             context: ./src/
-        volumes_from:
-            - applications
+        volumes: *AppVol
         ports:
             - 3000:3000
         container_name: nuxt-js
-        command: ["yarn", "buildStart"]
+        command: ["yarn", "production"]
         networks:
-            - nuxt
+            - A1
