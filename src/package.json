@@ -1,7 +1,7 @@
 {
-  "name": "src",
-  "version": "1.0.0",
-  "description": "xanzhu in the flesh",
+  "name": "a1",
+  "version": "0.0.1",
+  "description": "xanzhu in the flesh | A1 Server",
   "author": "xanzhu",
   "private": true,
   "scripts": {
@@ -9,7 +9,8 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "production": "yarn build && yarn lint --fix && yarn generate"
   },
   "dependencies": {
     "nuxt": "^2.0.0",
