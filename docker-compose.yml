@@ -2,7 +2,7 @@ version: '3.7'
 
 networks:
     A1:
-        driver: bridge
+       driver: bridge
 
 services:
 # Applications Code Container 
@@ -17,7 +17,7 @@ services:
         - ${SSL_CERT_KEY_PATH}:/etc/ssl/certs/key.pem
         - ${SSL_CLIENT_CERTIFICATE}:/etc/ssl/certs/cloudflare.crt
         - ${SSL_DHPARAM}:/certs/dhparam4096.pema
-        container_name: nuxt-app
+        container_name: nuxt-app-prod
         networks:
             - A1
 
@@ -33,8 +33,7 @@ services:
         links:
             - nuxtjs
         volumes: *AppVol
-
-        container_name: nuxt-nginx
+        container_name: nuxt-nginx-prod
         networks:
             - A1
 
@@ -45,7 +44,7 @@ services:
         volumes: *AppVol
         ports:
             - 3000:3000
-        container_name: nuxt-js
+        container_name: nuxt-js-prod
         command: ["yarn", "production"]
         networks:
             - A1
