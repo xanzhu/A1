@@ -16,7 +16,7 @@ services:
         - ${SSL_CERT_PATH}:/etc/ssl/certs/cert.pem
         - ${SSL_CERT_KEY_PATH}:/etc/ssl/certs/key.pem
         - ${SSL_CLIENT_CERTIFICATE}:/etc/ssl/certs/cloudflare.crt
-        - ${SSL_DHPARAM}:/certs/dhparam4096.pema
+        - ${SSL_DHPARAM}:/etc/ssl/certs/dhparam4096.pema
         container_name: nuxt-app-prod
         networks:
             - A1
