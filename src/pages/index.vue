@@ -1,72 +1,106 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        src
-      </h1>
-      <h2 class="subtitle">
-        xanzhu in the flesh
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
-  </div>
+  <main>
+    <p class="version-date">
+      A1 - APRIL 21 2020
+    </p>
+    <h1 class="title">
+      XANZHU
+    </h1>
+    <p>We're currently updating our website.</p>
+    <p>Check back soon.</p>
+    <p class="Background-Credit">
+      <a
+        href="https://www.pexels.com/photo/photo-of-northern-lights-1819656/"
+        target="_blank"
+      >Photo by Tobias Bjørkli</a>
+    </p>
+  </main>
 </template>
 
-<script>
-import Logo from '~/components/Logo.vue'
-
-export default {
-  components: {
-    Logo
-  }
-}
-</script>
-
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+body, html {
+    height: calc(100% - 2em);
+    margin: 0;
+    font-family: 'Helvetica', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+body {
+    margin-top: 2em;
+    color: #fff;
+    line-height: 1.7em;
+    font-size: 1.1em;
+    text-align: center;
+    overflow: hidden;
+    background: url('../static/GPV1.JPG');
+    background-color:#505D6E;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+.version-date {
+    display: none;
 }
 
-.links {
-  padding-top: 15px;
+main {
+    padding: 4em 1.3em;
 }
+
+h1 {
+    margin: 0;
+    padding-bottom: 1em;
+    font-size: 3em;
+}
+p {
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    font-size: 1.4em;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(250, 237, 54);
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+@media only screen and (min-width: 768px){
+
+    body, html {
+        margin: 0;
+        padding: 0;
+        text-align: left;
+    }
+
+    main {
+        line-height: 1.7em;
+        padding: 4em;
+        margin: 11em 2em 8em;
+    }
+
+    h1 {
+        font-size: 5em;
+        padding-bottom: 0.3em;
+    }
+    p {
+        font-size: 1.7em;
+    }
+
+    .version-date {
+    display: block;
+    padding-bottom: 1em;
+    font-size: 1em;
+    font-weight: bold;
+    }
+}
+
 </style>
