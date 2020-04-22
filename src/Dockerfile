@@ -1,4 +1,4 @@
-FROM node:13.13.0-alpine
+FROM node:latest
 
 # Install node modules
 RUN yarn global add nodemon
