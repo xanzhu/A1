@@ -1,7 +1,7 @@
 <template>
   <main>
     <p class="version-date">
-      A1 - APRIL 21 2020
+      A1 - APRIL 22 2020
     </p>
     <h1 class="title">
       XANZHU
@@ -32,7 +32,7 @@ body {
     text-align: center;
     overflow: hidden;
     background: url('../static/GPV1.JPG');
-    background-color:#505D6E;
+    background-color:#0a181c;
     background-repeat: no-repeat;
     background-position: top center;
     background-attachment: fixed;
