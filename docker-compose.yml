@@ -38,10 +38,10 @@ services:
             - ./Djin/ssl.conf:/etc/nginx/Djin/ssl.conf
            # - ./Djin/headers.conf:/etc/nginx/Djin/headers.conf
             - ./config/${ENVIRONMENT}.conf:/etc/nginx/conf.d/site.conf
-            - ${SSL_CERT_PATH}:/etc/ssl/certs/cert.pem
-            - ${SSL_CERT_KEY_PATH}:/etc/ssl/certs/key.pem
-            - ${SSL_CLIENT_CERTIFICATE}:/etc/ssl/certs/cloudflare.crt
-            - ${SSL_DHPARAM}:/etc/ssl/certs/dhparam4096.pem
+            - ${SSL_CERT_PATH}:/etc/nginx/certs/cert.pem
+            - ${SSL_CERT_KEY_PATH}:/etc/nginx/certs/key.pem
+            - ${SSL_CLIENT_CERTIFICATE}:/etc/nginx/certs/cloudflare.crt
+            - ${SSL_DHPARAM}:/etc/nginx/certs/dhparam4096.pem
         container_name: nuxt-nginx-prod
         networks:
             - A1
