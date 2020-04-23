@@ -12,7 +12,7 @@
       <a
         href="https://www.pexels.com/photo/photo-of-northern-lights-1819656/"
         target="_blank"
-      >Photo by Tobias Bjørkli //Test</a>
+      >Photo by Tobias Bjørkli</a>
     </p>
   </main>
 </template>
@@ -31,7 +31,7 @@ body {
     font-size: 1.1em;
     text-align: center;
     overflow: hidden;
-    background: url('/GPV1.JPG');
+    background: url('static/GPV1.JPG');
     background-color:#0a181c;
     background-repeat: no-repeat;
     background-position: top center;

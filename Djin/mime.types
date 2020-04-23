@@ -1,38 +1,16 @@
-# XANZHU MIME DATA TYPES | A1
 types {
-
-  # Data interchange
-
     application/atom+xml                  atom;
     application/json                      json map topojson;
     application/ld+json                   jsonld;
     application/rss+xml                   rss;
-    # Normalize to standard type.
-    # https://tools.ietf.org/html/rfc7946#section-12
     application/geo+json                  geojson;
     application/xml                       xml;
-    # Normalize to standard type.
-    # https://tools.ietf.org/html/rfc3870#section-2
     application/rdf+xml                   rdf;
-
-
-  # JavaScript
-
-    # Servers should use text/javascript for JavaScript resources.
-    # https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages
     text/javascript                       js mjs;
     application/wasm                      wasm;
-
-
-  # Manifest files
-
     application/manifest+json             webmanifest;
     application/x-web-app-manifest+json   webapp;
     text/cache-manifest                   appcache;
-
-
-  # Media files
-
     audio/midi                            mid midi kar;
     audio/mp4                             aac f4a f4b m4a;
     audio/mpeg                            mp3;
@@ -62,36 +40,19 @@ types {
     video/x-ms-wmv                        wmv;
     video/x-msvideo                       avi;
     video/x-matroska                      mkv mk3d;
-
-    # Serving `.ico` image files with a different media type
-    # prevents Internet Explorer from displaying then as images:
-    # https://github.com/h5bp/html5-boilerplate/commit/37b5fec090d00f38de64b591bcddcb205aadf8ee
-
     image/x-icon                          cur ico;
-
-
-  # Microsoft Office
-
     application/msword                                                         doc;
     application/vnd.ms-excel                                                   xls;
     application/vnd.ms-powerpoint                                              ppt;
     application/vnd.openxmlformats-officedocument.wordprocessingml.document    docx;
     application/vnd.openxmlformats-officedocument.spreadsheetml.sheet          xlsx;
     application/vnd.openxmlformats-officedocument.presentationml.presentation  pptx;
-
-
-  # Web fonts
-
     font/woff                             woff;
     font/woff2                            woff2;
     application/vnd.ms-fontobject         eot;
     font/ttf                              ttf;
     font/collection                       ttc;
     font/otf                              otf;
-
-
-  # Other
-
     application/java-archive              ear jar war;
     application/mac-binhex40              hqx;
     application/octet-stream              bin deb dll dmg exe img iso msi msm msp safariextz;
@@ -136,5 +97,4 @@ types {
     text/vnd.wap.wml                      wml;
     text/vtt                              vtt;
     text/x-component                      htc;
-
 }
