@@ -13,13 +13,15 @@
     "production": "yarn build && yarn lint --fix && yarn generate"
   },
   "dependencies": {
+    
     "nuxt": "^2.12.2"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
+    "@nuxtjs/eslint-module": "^1.1.0",
+    "eslint-friendly-formatter": "^4.0.1",
     "eslint-loader": "^4.0.0",
-    "eslint-plugin-nuxt": ">=0.5.2",
-    "eslint-friendly-formatter":"^4.0.1"
+    "eslint-plugin-nuxt": ">=0.5.2"
   }
 }
