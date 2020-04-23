@@ -50,7 +50,7 @@ services:
 
 # NuxtJS frontend Container
     nuxtjs:
-        build:
+        build: /usr/src/app
             context: ./src/
         volumes:
             - ./src/:/usr/src/app
