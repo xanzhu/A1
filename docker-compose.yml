@@ -54,8 +54,8 @@ services:
             context: ./src/
         volumes:
             - ./src/:/usr/src/app
-        #ports:
-        #    - 3000:3000
+        ports:
+            - 3000:3000
         container_name: nuxt-js-prod
         command: ["yarn", "production"]
         networks:
