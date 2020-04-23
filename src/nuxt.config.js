@@ -19,22 +19,41 @@ export default {
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+  css: [
+  ],
+  /*
+  ** Plugins to load before mounting the App
+  */
+  plugins: [
+  ],
+  /*
+  ** Nuxt.js dev-modules
+  */
+  buildModules: [
+  // Doc: https://github.com/nuxt-community/eslint-module
+  '@nuxtjs/eslint-module',
+  ],
+  /*
+  ** Nuxt.js modules
+  */
+  modules: [
+  ],
   /*
   ** Build configuration
   */
   build: {
-    /*
-    ** Run ESLint on save
-    */
-    extend (config, { isDev, isClient }) {
-      if (isDev && isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
+  /*
+  ** Run ESLint on save
+  */
+  extend (config, { isDev, isClient }) {
+    if (isDev && isClient) {
+      config.module.rules.push({
+        enforce: 'pre',
+        test: /\.(js|vue)$/,
+        loader: 'eslint-loader',
+        exclude: /(node_modules)/
+      })
     }
   }
+}
 }
