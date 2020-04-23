@@ -31,7 +31,7 @@ body {
     font-size: 1.1em;
     text-align: center;
     overflow: hidden;
-    background-image: url('~assets/GPV1.JPG');
+    background-image: url('/GPV1.JPG');
     background-color:#0a181c;
     background-repeat: no-repeat;
     background-position: top center;
