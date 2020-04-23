@@ -12,7 +12,7 @@ export default {
       { hid: 'description', name: 'description', content: 'Security is very important. Stay up to date with what’s happening and find the information you need at xanzhu. Site coming soon.' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: 'static/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
   /*
