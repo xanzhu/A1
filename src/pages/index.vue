@@ -1,7 +1,7 @@
 <template>
   <main>
     <p class="version-date">
-      A1 - APRIL 23 2020
+      A1 - APRIL 23 2020 ////
     </p>
     <h1 class="title">
       XANZHU
