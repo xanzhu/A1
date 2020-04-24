@@ -8,7 +8,6 @@
     </h1>
     <p>We're currently updating our website.</p>
     <p>Check back soon.</p>
-    <img src="/GPV1.jpg" alt="Background Scenery Snowy mountain">
   </main>
 </template>
 
@@ -26,15 +25,6 @@ body {
     font-size: 1.1em;
     text-align: center;
     overflow: hidden;
-    /*background-image: url('/GPV1.JPG'); Fix this*/ 
-    background-color:#0a181c;
-    /*background-repeat: no-repeat;
-    background-position: top center;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-       -moz-background-size: cover;
-         -o-background-size: cover;
-            background-size: cover;*/
 }
 
 .version-date {
@@ -43,6 +33,15 @@ body {
 
 main {
     padding: 4em 1.3em;
+    background-image: url('/GPV1.JPG');
+    background-color:#0a181c;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
 }
 
 h1 {
