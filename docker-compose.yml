@@ -52,7 +52,8 @@ services:
     nuxtjs:
         build:
             context: ./src/
-        volumes:
+            dockerfile: Dockerfile
+        #volumes:
             #- ./src/:/usr/src/app
         expose:
             - 3000
