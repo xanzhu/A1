@@ -8,6 +8,7 @@
     </h1>
     <p>We're currently updating our website.</p>
     <p>Check back soon.</p>
+    <img src="/GPV1.jpg" alt="Background Scenery Snowy mountain">
   </main>
 </template>
 
