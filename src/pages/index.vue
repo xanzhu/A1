@@ -1,5 +1,6 @@
 <template>
   <main>
+     <div class="background" :style="{ backgroundImage: `url(${backgroundUrl})` }"></div>
     <p class="version-date">
       A1 - APRIL 2020
     </p>
@@ -25,6 +26,15 @@ body {
     font-size: 1.1em;
     text-align: center;
     overflow: hidden;
+    background-color:#0a181c;
+    /*background-image: url('/GPV1.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;*/
 }
 
 .version-date {
@@ -33,15 +43,6 @@ body {
 
 main {
     padding: 4em 1.3em;
-    background-image: url('./GPV1.JPG');
-    background-color:#0a181c;
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-       -moz-background-size: cover;
-         -o-background-size: cover;
-            background-size: cover;
 }
 
 h1 {
