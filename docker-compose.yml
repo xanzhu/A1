@@ -27,9 +27,9 @@ services:
         ports:
             - 80:80
             - 443:443
-        expose:
-            - 80
-            - 443
+        #expose:
+        #    - 80
+        #    - 443
         links:
             - nuxtjs
         volumes:
@@ -53,9 +53,9 @@ services:
         build:
             context: ./src/
         volumes:
-            - ./src/:/usr/src/app
-        ports:
-            - 3000:3000
+            #- ./src/:/usr/src/app
+        expose:
+            - 3000
         container_name: nuxt-js-prod
         command: ["yarn", "production"]
         networks:
