@@ -1,19 +1,13 @@
 <template>
   <main>
     <p class="version-date">
-      A1 - APRIL 23 2020
+      A1 - APRIL 2020
     </p>
     <h1 class="title">
       XANZHU
     </h1>
     <p>We're currently updating our website.</p>
     <p>Check back soon.</p>
-    <p class="Background-Credit">
-      <a
-        href="https://www.pexels.com/photo/photo-of-northern-lights-1819656/"
-        target="_blank"
-      >Photo by Tobias Bjørkli</a>
-    </p>
   </main>
 </template>
 
@@ -31,15 +25,15 @@ body {
     font-size: 1.1em;
     text-align: center;
     overflow: hidden;
-    background-image: url('/GPV1.JPG');
+    /*background-image: url('/GPV1.JPG'); Fix this*/ 
     background-color:#0a181c;
-    background-repeat: no-repeat;
+    /*background-repeat: no-repeat;
     background-position: top center;
     background-attachment: fixed;
     -webkit-background-size: cover;
        -moz-background-size: cover;
          -o-background-size: cover;
-            background-size: cover;
+            background-size: cover;*/
 }
 
 .version-date {

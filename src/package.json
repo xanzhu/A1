@@ -10,7 +10,7 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "production": "yarn build && yarn start"
+    "production": "yarn lint --fix && yarn generate"
   },
   "dependencies": {
     "nuxt": "^2.12.2"
