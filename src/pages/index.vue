@@ -33,7 +33,7 @@ body {
 
 main {
     padding: 4em 1.3em;
-    background-image: url('/GPV1.JPG');
+    background-image: url('./GPV1.JPG');
     background-color:#0a181c;
     background-repeat: no-repeat;
     background-position: top center;
