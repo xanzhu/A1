@@ -45,7 +45,6 @@ export default {
   ** Build configuration
   */
   build: {
-    publicPath: '/dist/',
     postcss: {
       preset: {
         features: {
