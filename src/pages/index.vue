@@ -14,6 +14,9 @@
         target="_blank"
       >Photo by Tobias Bjørkli</a>
     </p>
+    <!-- Matomo Image Tracker
+    <img src="https://xanzhu.matomo.cloud/matomo.php?idsite=1&amp;rec=1" style="border:0" alt="" />
+     End Matomo -->
   </main>
 </template>
 <!-- Matomo (Experimenting)-->
