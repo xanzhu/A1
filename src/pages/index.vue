@@ -8,6 +8,12 @@
     </h1>
     <p>We're currently updating our website.</p>
     <p>Check back soon.</p>
+        <p class="Background-Credit">
+      <a
+        href="https://www.pexels.com/photo/photo-of-northern-lights-1819656/"
+        target="_blank"
+      >Photo by Tobias Bjørkli</a>
+    </p>
   </main>
 </template>
 
