@@ -1,6 +1,5 @@
 <template>
   <main>
-     <div class="background" :style="{ backgroundImage: `url('/GPV1.jpg')` }"></div>
     <p class="version-date">
       A1 - APRIL 2020
     </p>
@@ -97,5 +96,4 @@ a:hover {
     font-weight: bold;
     }
 }
-
 </style>

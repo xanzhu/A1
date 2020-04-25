@@ -33,7 +33,7 @@ services:
         links:
             - nuxtjs
         volumes:
-            - ./src/:/usr/src/app
+            - ./src/:/Applications/A1/
             - ./tmp/logs:/var/log/nginx
             - ./config/nginx/nginx.conf:/etc/nginx/nginx.conf
             - ./Djin/ssl.conf:/etc/nginx/Djin/ssl.conf
@@ -54,7 +54,7 @@ services:
             context: ./src/
             dockerfile: Dockerfile
         volumes:
-            - ./src/:/usr/src/app
+            - ./src/:/Applications/A1/
         expose:
             - 3000
         container_name: nuxt-js-prod

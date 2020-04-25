@@ -4,8 +4,8 @@ FROM node:latest
 RUN yarn global add nodemon
 
 # Create app directory
-RUN mkdir -p /usr/src/app/
-WORKDIR /usr/src/app/
+RUN mkdir -p /Applications/A1/
+WORKDIR /Applications/A1/
 
 ONBUILD RUN yarn install
 
