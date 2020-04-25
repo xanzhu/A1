@@ -26,14 +26,14 @@ body {
     text-align: center;
     overflow: hidden;
     background-color:#0a181c;
-    /*background-image: url('/GPV1.jpg');
+    background-image: url('~static/Green.jpg');
     background-repeat: no-repeat;
     background-position: top center;
     background-attachment: fixed;
     -webkit-background-size: cover;
        -moz-background-size: cover;
          -o-background-size: cover;
-            background-size: cover;*/
+            background-size: cover;
 }
 
 .version-date {
