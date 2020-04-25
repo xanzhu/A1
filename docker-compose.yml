@@ -44,7 +44,6 @@ services:
             - ${SSL_CLIENT_CERTIFICATE}:/etc/nginx/certs/cloudflare.crt
             - ${SSL_DHPARAM}:/etc/nginx/certs/dhparam4096.pem
             - ./Djin/mime.types:/etc/nginx/Djin/mime.types
-            - ./Djin/Cache:/etc/nginx/Djin/Cache
         container_name: nuxt-nginx-prod
         networks:
             - A1

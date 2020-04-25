@@ -1,6 +1,6 @@
 <template>
   <main>
-     <div class="background" :style="{ backgroundImage: `url(${backgroundUrl})` }"></div>
+     <div class="background" :style="{ backgroundImage: `url('/GPV1.jpg')` }"></div>
     <p class="version-date">
       A1 - APRIL 2020
     </p>
