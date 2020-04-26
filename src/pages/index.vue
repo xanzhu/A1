@@ -10,9 +10,10 @@
     <p>Check back soon.</p>
         <p class="Background-Credit">
       <a
-        href="https://www.pexels.com/photo/photo-of-northern-lights-1819656/"
+        class="photo-link"
+        href="https://www.pexels.com/photo/people-at-a-rooftop-during-sunset-3922959/"
         target="_blank"
-      >Photo by Tobias Bjørkli</a>
+      >Photo by alleksana</a>
     </p>
     <!-- Matomo (Experimental) -->
     <img src="https://xanzhu.matomo.cloud/matomo.php?idsite=1&amp;rec=1" style="border:0" alt="" />
@@ -34,9 +35,9 @@ body {
     text-align: center;
     overflow: hidden;
     background-color:#0a181c;
-    background-image: url('~static/Green.jpg');
+    background-image: url('~static/G10P2.png');
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: bottom center;
     background-attachment: fixed;
     -webkit-background-size: cover;
        -moz-background-size: cover;
@@ -64,11 +65,11 @@ p {
     font-size: 1.4em;
 }
 
-a {
-    text-decoration: none;
-    color: rgb(250, 237, 54);
-    font-size: 16px;
-    letter-spacing: 2px;
+.photo-link {
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 16px;
+  color: rgb(255, 230, 0);
 }
 
 a:hover {
