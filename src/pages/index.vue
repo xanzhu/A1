@@ -15,9 +15,6 @@
         target="_blank"
       >Photo by alleksana</a>
     </p>
-    <!-- Matomo (Experimental) -->
-    <img src="https://xanzhu.matomo.cloud/matomo.php?idsite=1&amp;rec=1" style="border:0" alt="" />
-    <!-- End Matomo -->
   </main>
 </template>
 <style>
