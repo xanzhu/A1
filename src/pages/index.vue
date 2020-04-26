@@ -35,14 +35,6 @@ body {
     text-align: center;
     overflow: hidden;
     background-color:#0a181c;
-    background-image: url('~static/G10P2.png');
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-       -moz-background-size: cover;
-         -o-background-size: cover;
-            background-size: cover;
 }
 
 .version-date {
@@ -66,10 +58,7 @@ p {
 }
 
 .photo-link {
-  text-decoration: none;
-  letter-spacing: 2px;
-  font-size: 16px;
-  color: rgb(255, 230, 0);
+  display: none;
 }
 
 a:hover {
@@ -82,6 +71,18 @@ a:hover {
         margin: 0;
         padding: 0;
         text-align: left;
+    }
+
+    body {
+      background-color:#0a181c;
+      background-image: url('~static/G10P2.png');
+      background-repeat: no-repeat;
+      background-position: bottom center;
+      background-attachment: fixed;
+        -webkit-background-size: cover;
+          -moz-background-size: cover;
+            -o-background-size: cover;
+              background-size: cover;
     }
 
     main {
@@ -104,5 +105,13 @@ a:hover {
     font-size: 1em;
     font-weight: bold;
     }
+
+    .photo-link {
+    display: block;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 16px;
+    color: rgb(255, 230, 0);
+  }
 }
 </style>
