@@ -72,7 +72,7 @@ a:hover {
 
     body {
       background-color:#0a181c;
-      background-image: url('~static/G10P2.jpg');
+      background-image: url('~static/G3V3.jpg');
       background-repeat: no-repeat;
       background-position: bottom center;
       background-attachment: fixed;
