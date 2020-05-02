@@ -1,14 +1,14 @@
 <template>
   <main>
     <p class="version-date">
-      A1 - APRIL 2020
+      A1 - MAY 2020
     </p>
     <h1 class="title">
       XANZHU
     </h1>
     <p>We're currently updating our website.</p>
     <p>Check back soon.</p>
-        <p class="Background-Credit">
+    <p class="Background-Credit">
       <a
         class="photo-link"
         href="https://www.pexels.com/photo/people-at-a-rooftop-during-sunset-3922959/"
