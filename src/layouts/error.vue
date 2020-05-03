@@ -1,9 +1,11 @@
 <template>
   <div class="error">
-    <xan-logo />
+    <xan-logo/>
     <h1 v-if="error.statusCode === 404">
       Page not found.
     </h1>
+  <br>
+  <a href="/">Return</a>
   </div>
 </template>
 
@@ -38,6 +40,10 @@ svg {
 .error-home {
   color: white;
   font-weight: 700;
+}
+
+a {
+  color: #fff;
 }
 
 @media only screen and (max-width: 768px){
