@@ -1,11 +1,11 @@
 <template>
   <div class="error">
-    <xan-logo/>
+    <xan-logo class="elogo" />
     <h1 v-if="error.statusCode === 404">
       Page not found.
     </h1>
-  <br>
-  <a href="/">Return</a>
+    <br>
+    <a href="/" class="backlink">Return</a>
   </div>
 </template>
 
@@ -33,7 +33,7 @@ body {
   padding: 3em;
   text-align: center;
 }
-svg {
+.elogo {
   fill: #fff;
   max-height: 15em;
 }
@@ -42,18 +42,35 @@ svg {
   font-weight: 700;
 }
 
-a {
-  color: #fff;
+.backlink {
+  text-decoration: none;
+  color: #ffff00;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  border: 1px solid yellow;
+  padding: 0.6em;
 }
 
 @media only screen and (max-width: 768px){
   h1 {
     margin: 1em;
     text-align: center;
+    margin: 0;
   }
 
   .error {
-    padding: 2em;
+    padding: 2em 1em 2em 1em;
   }
+
+  .backlink {
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .elogo {
+    margin-bottom: 1.5em;
+  }
+
 }
 </style>
