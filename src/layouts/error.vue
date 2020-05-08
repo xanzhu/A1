@@ -37,10 +37,6 @@ body {
   fill: #fff;
   max-height: 15em;
 }
-.error-home {
-  color: white;
-  font-weight: 700;
-}
 
 .backlink {
   text-decoration: none;
@@ -48,7 +44,7 @@ body {
   display: inline-block;
   font-weight: 600;
   font-size: 18px;
-  border: 1px solid yellow;
+  border: 1px solid #ffff00;
   padding: 0.6em;
 }
 

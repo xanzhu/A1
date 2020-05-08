@@ -5,6 +5,9 @@ export default {
   ** Headers of the page
   */
   head: {
+    htmlAttrs: {
+      lang: 'en-NZ'
+    },
     title: 'Security — xanzhu',
     meta: [
       { charset: 'utf-8' },

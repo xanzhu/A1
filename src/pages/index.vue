@@ -13,6 +13,7 @@
         class="photo-link"
         href="https://www.pexels.com/photo/people-at-a-rooftop-during-sunset-3922959/"
         target="_blank"
+        rel="noopener"
       >Photo by alleksana</a>
     </p>
   </main>
@@ -31,7 +32,7 @@ body {
     font-size: 1.1em;
     text-align: center;
     overflow: hidden;
-    background-color:#0a181c;
+    background-color: #000; /*#0a181c*/
 }
 
 .version-date {
@@ -71,7 +72,7 @@ a:hover {
     }
 
     body {
-      background-color:#0a181c;
+      background-color:#000; /*#0a181c*/
       background-image: url('~static/G3V3.jpg');
       background-repeat: no-repeat;
       background-position: bottom center;
