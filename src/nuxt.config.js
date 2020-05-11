@@ -1,28 +1,6 @@
 
 export default {
   mode: 'universal',
-  /* 
-  ** Security Headers | Experimental
-  */
- render: {
- csp: {
-  reportOnly: true,
-  hashAlgorithm: 'sha256',
-  policies: {
-    'default-src': ["'self'"],
-    'img-src': ["'https:'", "'self'"],
-    'worker-src': ["'self'"],
-    'style-src': ["'self'", "'unsafe-inline'"],
-    'script-src': ["'self'", "'unsafe-inline'"],
-    'form-action': ["'self'"],
-    'frame-ancestors': ["'none'"],
-    'object-src': ["'none'"],
-    'report-uri': [
-      `https://xanzhu.report-uri.com/r/d/csp/reportOnly`
-    ]
-  }
-}
-},
 
 /*
  ** Headers of the page
