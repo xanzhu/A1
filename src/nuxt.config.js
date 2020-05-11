@@ -4,13 +4,13 @@ export default {
   /* 
   ** Security Headers | Experimental
   */
-
+ render: {
  csp: {
   reportOnly: true,
   hashAlgorithm: 'sha256',
   policies: {
     'default-src': ["'self'"],
-    'img-src': ['https:'],
+    'img-src': ["'https:'", "'self'"],
     'worker-src': ["'self'"],
     'style-src': ["'self'", "'unsafe-inline'"],
     'script-src': ["'self'", "'unsafe-inline'"],
@@ -21,6 +21,7 @@ export default {
       `https://xanzhu.report-uri.com/r/d/csp/reportOnly`
     ]
   }
+}
 },
 
 /*
