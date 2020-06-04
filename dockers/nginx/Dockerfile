@@ -1,7 +1,5 @@
 FROM nginx:latest
 
-RUN ./configure --with-http_stub_status_module
-
 RUN ln -sf /dev/stdout /var/log/nginx/access.log \
 	&& ln -sf /dev/stderr /var/log/nginx/error.log
 
