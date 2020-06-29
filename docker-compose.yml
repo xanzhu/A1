@@ -23,7 +23,7 @@ services:
             - ${SSL_CERT_KEY_PATH}:/etc/nginx/certs/key.pem
             - ${SSL_DHPARAM}:/etc/nginx/certs/dhparam4096.pem
             - ./Djin/mime.types:/etc/nginx/Djin/mime.types
-            - ./Dynasty/:/Applications/A1/Dynasty #Testing
+            - ./Dynasty/:/Applications/A1/Dynasty/ #Testing
         container_name: nuxt-nginx-prod
         networks:
             - A1
@@ -34,7 +34,7 @@ services:
             dockerfile: Dockerfile
         volumes:
             - ./src/:/Applications/A1/
-            - ./Dynasty/:Applications/A1/Dynasty
+            - ./Dynasty/:Applications/A1/Dynasty/
         expose:
             - 3000
         container_name: nuxt-js-prod
