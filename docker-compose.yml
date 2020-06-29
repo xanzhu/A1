@@ -47,7 +47,7 @@ services:
         volumes:
             - ./Dynasty/:/Applications/A2/
         expose:
-            - 3002
+            - 3000
         container_name: nuxt-js-dev
         command: ["yarn", "production"]
         networks:
