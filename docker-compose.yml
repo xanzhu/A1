@@ -30,7 +30,7 @@ services:
     nuxtjs:
         build:
             context: ./src/
-            context: ./Dynasty-Build-02/
+            context: ./Dynasty/
             dockerfile: Dockerfile
         volumes:
             - ./src/:/Applications/A1/
