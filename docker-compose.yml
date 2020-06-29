@@ -2,7 +2,7 @@ version: '3.7'
 
 networks:
     A1:
-       driver: bridge #Review 
+       driver: bridge
        
 services:
     nginx:
@@ -21,18 +21,20 @@ services:
             - ./config/${ENVIRONMENT}.conf:/etc/nginx/conf.d/site.conf
             - ${SSL_CERT_PATH}:/etc/nginx/certs/cert.pem
             - ${SSL_CERT_KEY_PATH}:/etc/nginx/certs/key.pem
-            # - ${SSL_TRUSTED_CERTIFICATE}:/etc/nginx/certs/cloudflare.crt
             - ${SSL_DHPARAM}:/etc/nginx/certs/dhparam4096.pem
             - ./Djin/mime.types:/etc/nginx/Djin/mime.types
+            - ./Dynasty/:/Applications/A1/Dynasty #Testing
         container_name: nuxt-nginx-prod
         networks:
             - A1
     nuxtjs:
         build:
             context: ./src/
+            context: ./Dynasty-Build-02/
             dockerfile: Dockerfile
         volumes:
             - ./src/:/Applications/A1/
+            - ./Dynasty/:Applications/A1/Dynasty
         expose:
             - 3000
         container_name: nuxt-js-prod
