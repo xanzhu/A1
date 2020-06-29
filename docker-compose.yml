@@ -45,7 +45,7 @@ services:
             context: ./Dynasty/
             dockerfile: Dockerfile
         volumes:
-            - ./src/:/Applications/A1.1/
+            - ./Dynasty/:/Applications/A1.1/
         expose:
             - 3002
         container_name: nuxt-js-dev
