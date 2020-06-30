@@ -12,6 +12,7 @@ services:
             - 443:443
         links:
             - nuxtjs
+            - nuxtjs-dev
         volumes:
             - ./src/:/Applications/A1/
             - ./Dynasty/:/Applications/A1.1/
@@ -27,7 +28,7 @@ services:
         container_name: nuxt-nginx-prod
         networks:
             - A1.1
-    nuxtjs:
+    nuxtjs-dev:
         build:
             context: ./src/
             dockerfile: Dockerfile
@@ -35,10 +36,10 @@ services:
             - ./src/:/Applications/A1/
         expose:
             - 3000
-        container_name: nuxt-js-prod
+        container_name: nuxt-js-dev
         command: ["yarn", "production"]
         networks:
-            - A1
+            - A1.1
     nuxtjs:
         build:
             context: ./Dynasty/
