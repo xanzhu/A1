@@ -27,18 +27,18 @@ services:
         container_name: nuxt-nginx-prod
         networks:
             - A1.1
-    # nuxtjs:
-    #     build:
-    #         context: ./src/
-    #         dockerfile: Dockerfile
-    #     volumes:
-    #         - ./src/:/Applications/A1/
-    #     expose:
-    #         - 3000
-    #     container_name: nuxt-js-prod
-    #     command: ["yarn", "production"]
-    #     networks:
-    #         - A1
+    nuxtjs:
+        build:
+            context: ./src/
+            dockerfile: Dockerfile
+        volumes:
+            - ./src/:/Applications/A1/
+        expose:
+            - 3000
+        container_name: nuxt-js-prod
+        command: ["yarn", "production"]
+        networks:
+            - A1
     nuxtjs:
         build:
             context: ./Dynasty/
