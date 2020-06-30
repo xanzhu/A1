@@ -12,7 +12,7 @@ services:
             - 443:443
         links:
             - nuxtjs
-            - nuxtjs-dev
+            # - nuxtjs-dev
         volumes:
             - ./src/:/Applications/A1/
             - ./Dynasty/:/Applications/A1.1/
