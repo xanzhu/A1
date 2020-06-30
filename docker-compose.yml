@@ -15,7 +15,7 @@ services:
             # - nuxtjs-dev
         volumes:
             - ./src/:/Applications/A1/
-            - ./Dynasty/:/Applications/A2/
+            - ./Dynasty/:/Applications/1.1/
             - ./tmp/logs:/var/log/nginx
             - ./config/nginx/nginx.conf:/etc/nginx/nginx.conf
             - ./Djin/ssl.conf:/etc/nginx/Djin/ssl.conf
@@ -45,7 +45,7 @@ services:
             context: ./Dynasty/
             dockerfile: Dockerfile
         volumes:
-            - ./Dynasty/:/Applications/A2/
+            - ./Dynasty/:/Applications/A1.1/
         expose:
             - 3000
         container_name: nuxt-js-prod
