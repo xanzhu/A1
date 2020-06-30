@@ -1,7 +1,7 @@
 version: '3.7'
 
 networks:
-    A1:
+    A1.1:
        driver: bridge
        
 services:
@@ -26,7 +26,7 @@ services:
             - ./Djin/mime.types:/etc/nginx/Djin/mime.types
         container_name: nuxt-nginx-prod
         networks:
-            - A1
+            - A1.1
     # nuxtjs:
     #     build:
     #         context: ./src/
@@ -50,4 +50,4 @@ services:
         container_name: nuxt-js-prod
         command: ["yarn", "production"]
         networks:
-             - A1
+             - A1.1
