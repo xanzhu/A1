@@ -1,7 +1,7 @@
 {
   "name": "a1",
-  "version": "0.0.2",
-  "description": "xanzhu in the flesh | A1 Server",
+  "version": "0.0.3",
+  "description": "Xanzhu A1 framework (No longer using deps) All hosted under Dynasty",
   "author": "xanzhu",
   "private": true,
   "scripts": {
