@@ -13,7 +13,7 @@
     "production": "yarn lint --fix && yarn generate"
   },
   "dependencies": {
-    "nuxt": "2.12.2"
+    "nuxt": "2.13.2"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "3.0.0",
