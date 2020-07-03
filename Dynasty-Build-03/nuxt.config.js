@@ -60,9 +60,9 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+  },
+  generate: {
+    fallback: '404.html',
+    interval: 100
   }
-  // generate: {
-  //   fallback: '404.html',
-  //   interval: 100
-  // }
 }
