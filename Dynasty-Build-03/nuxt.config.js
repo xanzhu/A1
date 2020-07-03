@@ -54,9 +54,7 @@ export default {
   /*
   ** Nuxt.js modules
   */
-  modules: [
-    '~/modules/csp.js'
-  ],
+  modules: [],
   /*
   ** Build configuration
   ** See https://nuxtjs.org/api/configuration-build/
