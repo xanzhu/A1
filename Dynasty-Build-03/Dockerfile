@@ -11,4 +11,4 @@ ONBUILD RUN yarn install
 
 ENV HOST 0.0.0.0
 # Install app dependencies
-CMD [ "yarn", "production"]
+CMD [ "yarn", "modern"]

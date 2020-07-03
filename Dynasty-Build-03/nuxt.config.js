@@ -5,6 +5,7 @@ export default {
   ** See https://nuxtjs.org/api/configuration-mode
   */
   mode: 'universal',
+  modern: 'client',
   target: 'static',
   /*
   ** Headers of the page

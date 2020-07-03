@@ -30,7 +30,7 @@ services:
         expose:
             - 3000
         container_name: dynasty-developer
-        command: ["yarn", "production"]
+        command: ["yarn", "modern"]
 
     dynasty:
         build:
