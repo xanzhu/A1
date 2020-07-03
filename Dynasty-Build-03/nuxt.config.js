@@ -1,8 +1,5 @@
 
 export default {
-  render: {
-    csp: true
-  },
   /*
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode
@@ -58,6 +55,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '~/modules/csp.js'
   ],
   /*
   ** Build configuration
