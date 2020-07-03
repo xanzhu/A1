@@ -1,18 +1,11 @@
 version: '3.7'
 
-# networks:
-#     A1:
-#        driver: bridge
-       
 services:
     nginx:
         build: ./dockers/nginx/
         ports:
             - 80:80
             - 443:443
-        links:
-            - dynasty
-            - dynasty-dev
         volumes:
             - ./Dynasty-Build-03/:/Applications/Dev/
             - ./Dynasty/:/Applications/A1.1/
@@ -27,8 +20,7 @@ services:
             - ${SSL_CERT_KEY_PATH}:/etc/nginx/certs/key.pem
             - ${SSL_DHPARAM}:/etc/nginx/certs/dhparam4096.pem
         container_name: nginx-framework
-        # networks:
-        #     - A1
+
     dynasty-dev:
         build:
             context: ./Dynasty-Build-03/
@@ -39,8 +31,7 @@ services:
             - 3000
         container_name: dynasty-developer
         command: ["yarn", "production"]
-        # networks:
-        #     - A1
+
     dynasty:
         build:
             context: ./Dynasty/
