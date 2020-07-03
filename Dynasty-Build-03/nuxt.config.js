@@ -1,5 +1,8 @@
 
 export default {
+  render: {
+    csp: true
+  },
   /*
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode
@@ -26,7 +29,6 @@ export default {
       { property: 'og:url', type: 'https://xanzhu.com'}
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico?v2' },
       { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
       { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
       { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#ff0000' }
@@ -62,9 +64,9 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
-  },
-  generate: {
-    fallback: '404.html',
-    interval: 100
   }
+  // generate: {
+  //   fallback: '404.html',
+  //   interval: 100
+  // }
 }

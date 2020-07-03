@@ -1,7 +1,7 @@
 {
-  "name": "dynasty",
-  "version": "0.0.2",
-  "description": "Production server for xanzhu.com",
+  "name": "dynasty-dev",
+  "version": "0.0.3",
+  "description": "Production server for dev.xanzhu.com",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -13,13 +13,13 @@
     "production": "yarn build && yarn export"
   },
   "dependencies": {
-    "nuxt": "2.13.2"
+    "nuxt": "2.13.3"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "3.0.0",
     "@nuxtjs/eslint-module": "2.0.0",
     "@nuxtjs/tailwindcss": "2.0.0",
-    "babel-eslint": "^10.1.0",
+    "babel-eslint": "10.1.0",
     "eslint": "7.3.1",
     "eslint-plugin-nuxt": "1.0.0"
   }

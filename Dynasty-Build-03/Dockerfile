@@ -1,11 +1,11 @@
-FROM node:14.4.0-slim
+FROM node:14.5.0-slim
 
 # Install node modules
 RUN yarn global add nodemon
 
 # Create app directory
-RUN mkdir -p /Applications/A1.1/
-WORKDIR /Applications/A1.1/
+RUN mkdir -p /Applications/Dev/
+WORKDIR /Applications/Dev/
 
 ONBUILD RUN yarn install
 
