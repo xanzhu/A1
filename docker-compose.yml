@@ -46,7 +46,7 @@ services:
         container_name: dynasty-production
         command: ["yarn", "modern"]
         networks:
-            SUN
+            - SUN
         
 networks:
     SUN:
