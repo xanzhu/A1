@@ -1,7 +1,7 @@
 {
-  "name": "dynasty-dev",
+  "name": "dynasty",
   "version": "0.0.3",
-  "description": "Production server for dev.xanzhu.com",
+  "description": "Production server for xanzhu.com",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -21,7 +21,7 @@
     "@nuxtjs/eslint-module": "2.0.0",
     "@nuxtjs/tailwindcss": "2.0.0",
     "babel-eslint": "10.1.0",
-    "eslint": "7.3.1",
+    "eslint": "7.4.0",
     "eslint-plugin-nuxt": "1.0.0"
   }
 }
