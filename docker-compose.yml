@@ -2,45 +2,52 @@ version: '3.7'
 
 services:
     nginx:
-        build: ./dockers/nginx/
+        build: ./
+        dockerfile: Dockerfile
         ports:
             - 80:80
             - 443:443
         volumes:
-            - ./Dynasty-Build-03/:/Applications/Dev/
-            - ./Dynasty/:/Applications/A1.1/
-            - ./tmp/logs:/var/log/nginx
+            - ./Dynasty-Build-03/:/Applications/A1.1/
+            - ./Dynasty/:/Applications/A1.2/
+            - ./logs:/var/log/nginx
             - ./config/nginx/nginx.conf:/etc/nginx/nginx.conf
             - ./Djin/ssl.conf:/etc/nginx/Djin/ssl.conf
-            - ./Djin/headers.conf:/etc/nginx/Djin/headers.conf
-            # - ./Djin/dev-headers.conf:/etc/nginx/Djin/dev-headers.conf
             - ./Djin/mime.types:/etc/nginx/Djin/mime.types
             - ./config/${ENVIRONMENT}.conf:/etc/nginx/conf.d/site.conf
             - ${SSL_CERT_PATH}:/etc/nginx/certs/cert.pem
             - ${SSL_CERT_KEY_PATH}:/etc/nginx/certs/key.pem
             - ${SSL_DHPARAM}:/etc/nginx/certs/dhparam4096.pem
         container_name: nginx-framework
+        networks:
+            - SUN
 
     dynasty-dev:
-        build:
-            context: ./Dynasty-Build-03/
-            dockerfile: Dockerfile
-        volumes:
-            - ./Dynasty-Build-03/:/Dynasty/A1.2/
-        expose:
-            - 3000
-        container_name: dynasty-developer
-        command: ["yarn", "modern"]
-
-    dynasty:
         build:
             context: ./Dynasty/
             dockerfile: Dockerfile
         volumes:
-            - ./Dynasty/:/Dynasty/A1.1/
+            - ./Dynasty/:/Dynasty/A1.2/
+        expose:
+            - 3000
+        container_name: dynasty-developer
+        command: ["yarn", "modern"]
+        networks:
+            - SUN
+
+    dynasty:
+        build:
+            context: ./Dynasty-Build-03/
+            dockerfile: Dockerfile
+        volumes:
+            - ./Dynasty-Build-03/:/Dynasty/A1.1/
         expose:
             - 3000
         container_name: dynasty-production
-        command: ["yarn", "production"]
-        # networks:
-        #      - A1
+        command: ["yarn", "modern"]
+        networks:
+            SUN
+        
+networks:
+    SUN:
+        driver: bridge
