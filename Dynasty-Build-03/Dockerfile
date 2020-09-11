@@ -4,8 +4,8 @@ FROM node:14.5.0-slim
 RUN yarn global add nodemon
 
 # Create app directory
-RUN mkdir -p /Dynasty/A1.1/
-WORKDIR /Dynasty/A1.1/
+RUN mkdir -p /Dynasty/A1/
+WORKDIR /Dynasty/A1/
 
 ONBUILD RUN yarn install
 
