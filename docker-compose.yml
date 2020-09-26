@@ -32,7 +32,7 @@ services:
         expose:
             - 3000
         container_name: Ailo-developer
-        command: ["yarn", "modern"]
+        command: ["yarn", "buildProd"]
         networks:
             - SUN
 
