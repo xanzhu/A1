@@ -10,7 +10,7 @@ services:
             - 443:443
         volumes:
             - ./Dynasty-Build-03/:/Dynasty/A1/
-             - ./Ailo/:/a1/
+             - ./Ailo/:/a1/ailo/
             - ./logs:/var/log/nginx
             - ./config/nginx/nginx.conf:/etc/nginx/nginx.conf
             - ./config/default.conf:/etc/nginx/sites-enabled/default
@@ -29,11 +29,9 @@ services:
             context: ./Ailo
             dockerfile: Dockerfile
         volumes:
-            - ./Ailo/:/a1/
+            - ./Ailo/:/a1/ailo/
         expose:
             - 3000
-        environment: 
-            HOST: 0.0.0.0
         container_name: nuxt
         command: ["yarn", "production"]
         networks:
