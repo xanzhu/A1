@@ -29,7 +29,7 @@ services:
             context: ./Ailo
             dockerfile: Dockerfile
         volumes:
-            - ./Ailo/:/app/a1/
+            - ./Ailo/:/a1/
         expose:
             - 3000
         environment: 
