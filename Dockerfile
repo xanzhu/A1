@@ -11,5 +11,6 @@ RUN mkdir /logs
 RUN chmod -R 777 /logs
 
 EXPOSE 443
+EXPOSE 80
 
 ENTRYPOINT ["./start.sh"]

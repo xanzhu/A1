@@ -31,9 +31,9 @@ services:
         volumes:
             - ./Ailo/:/de/
         expose:
-            - 3000
-        environment: 
-            HOST: 0.0.0.0
+            - 3001
+        # environment: 
+        #     HOST: 0.0.0.0
         container_name: nuxt
         command: ["yarn", "buildProd"]
         networks:
