@@ -1,16 +1,17 @@
 FROM nginx:1.19.3
 
-RUN ln -sf /dev/stdout /var/log/nginx/access.log \
-	&& ln -sf /dev/stderr /var/log/nginx/error.log
+# Remove sym links from nginx image
+RUN rm /var/log/nginx/access.log
+RUN rm /var/log/nginx/error.log
 
-ADD start.sh /start.sh
-RUN chmod 777 /start.sh
-RUN mkdir /config
+# Install logrotate
+RUN apt-get update && apt-get -y install logrotate
 
-RUN mkdir /logs
-RUN chmod -R 777 /logs
+# Copy MyApp nginx config
+COPY config/nginx.conf /etc/nginx/nginx.conf
 
-EXPOSE 443
-EXPOSE 80
+#Copy logrotate nginx configuration
+COPY config/logrotate.d/nginx /etc/logrotate.d/
 
-ENTRYPOINT ["./start.sh"]
+# Start nginx and cron as a service
+CMD service cron start && nginx -g 'daemon off;'
