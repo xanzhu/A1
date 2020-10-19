@@ -8,7 +8,7 @@ RUN rm /var/log/nginx/error.log
 RUN apt-get update && apt-get -y install logrotate
 
 # Copy MyApp nginx config
-COPY config/nginx.conf /etc/nginx/nginx.conf
+COPY config/nginx/nginx.conf /etc/nginx/nginx.conf
 
 #Copy logrotate nginx configuration
 COPY config/logrotate.d/nginx /etc/logrotate.d/
