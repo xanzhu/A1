@@ -21,13 +21,13 @@ services:
             - ${SSL_DHPARAM}:/etc/nginx/certs/dhparam4096.pem #change paths to /etc/ssl/private/key.pem | /etc/ssl/certs/cert.pem ?
         container_name: nginx-framework
         restart: always
+        logging:
+            driver: "json-file"
+            options:
+              max-size: "200k"
+              max-file: "10"
         networks:
             - SUN
-        logging:
-          driver: "json-file"
-          options:
-          max-size: "100m"
-          max-file: "1"
 
     nuxt:
         build:
